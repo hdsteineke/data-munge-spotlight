@@ -66,7 +66,7 @@ Output:
 export function makeReversedArrayOfTypes(arr) {
     const mapArr = arr.map(pet => {
         return pet.type;
-    })
+    });
     const reverseArr = mapArr.reverse();
     return reverseArr;
 }
@@ -87,8 +87,8 @@ export function makeSpanishLanguageArray(arr) {
         return {
             nombre: pet.name,
             tipo: pet.type
-        }
-    }))
+        };
+    }));
     return mapArr;
 }
 
@@ -103,8 +103,15 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    arr.forEach(pet => {
+        {
+            pet.isHungry = true;
+        }
+    });
+    return arr;
 }
+
+
 
 /*
 Output:
@@ -196,8 +203,9 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    return arr.filter(car => car.type === 'car');
 }
+
 
 /*
 Output:
